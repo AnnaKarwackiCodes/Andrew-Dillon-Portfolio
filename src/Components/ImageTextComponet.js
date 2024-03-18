@@ -21,7 +21,7 @@ export default function ImageTextComponent({
   const myDirection = ImageLeft ? "row" : "row-reverse";
   return (
     <Stack
-      direction={myDirection}
+      direction={{xs: "column",md: myDirection}}
       paddingLeft={"5%"}
       paddingRight={"5%"}
       paddingTop={"2.5%"}
