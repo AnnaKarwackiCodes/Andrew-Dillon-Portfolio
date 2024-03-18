@@ -41,6 +41,7 @@ export default function Infocards({ Title, Infolist, ActionFunction, FunctionNam
           <Button
             size="small"
             variant="contained"
+            style={{backgroundColor:'#175825'}}
             onClick={() => {
                 ActionFunction();
             }}

@@ -46,6 +46,7 @@ export default function ImageTextComponent({
               marginTop={"15px"}
             >
               <Button
+                style={{backgroundColor:'#175825'}}
                 variant="contained"
                 onClick={() => {
                   ActionToCall();
@@ -63,6 +64,7 @@ export default function ImageTextComponent({
             >
               <Button
                 variant="contained"
+                style={{backgroundColor:'#175825'}}
                 onClick={() => {
                   SecondActionToCall();
                 }}

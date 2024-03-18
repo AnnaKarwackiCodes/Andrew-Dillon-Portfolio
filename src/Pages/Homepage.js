@@ -21,10 +21,10 @@ export default function Homepage({ setCurrentPage }) {
       <ImageTextComponent
         ImageLeft={false}
         ImagePath={require("../Media/Images/self.jpg")}
-        AltText={"photo of anna karwacki for intro section of the homepage"}
-        Title={"Hi There!"}
+        AltText={"photo of andrew dillon for intro section of the homepage"}
+        Title={"Hiya!"}
         Text={
-          "Thanks for stopping by, my name is Anna Karwacki. I am a software developer during the day, but during my free time I love creating things. Whether that is through development, art, design, or playing D&D with my friends."
+          "My name is Andrew Dillon but I go by AJ. I am currently a Software Engineer and an aspiring Game and UX Designer. My current obsessions are D&D, TCGS, and Video Games. More importantly, the cute corgi's name is Wulfred."
         }
         ImageWidth={"60%"}
         CallToActionName={"Contact Me"}
@@ -35,7 +35,7 @@ export default function Homepage({ setCurrentPage }) {
       <ImageTextComponent
         ImageLeft={true}
         ImagePath={require("../Media/Images/blackshot-screenshot.png")}
-        AltText={"photo of anna karwacki for intro section of the homepage"}
+        AltText={"screenshot of the pdf of the monk subclass"}
         Title={"Way of the Blackshot - 5e Monk Subclass"}
         Text={"GM Binder, HTML/CSS" +
         "\n\nCan be downloaded here or found on GM Binder. " +

@@ -30,17 +30,11 @@ export default function About({ setCurrentPage }) {
         ImageLeft={true}
         ImagePath={require("../Media/Images/self.jpg")}
         AltText={"gif of a pixel art version of myself writing"}
-        Title={"Behind the Curtain"}
-        Text={
-          "Grew up in Maryland and went 6 hours north to go to college at the Rochester Institute of Technology where I graduated Fall of 2018 with a BS in Game Design and Development. \n\nI am currently working as a software engineer at Turnaround Factor. Over the past 6-ish years I have worked on a wild collection of projects at different companies: from porting a mobile game to the Nintendo Switch to building websites for companies in the Western New York Area to now making a video conferencing app with AR features."
-        }
+        Title={"Where I Come From"}
+        Text={"I grew up in Buffalo, New York, the city of Football, Good Pizza, and Wings. I went attended college at Rochester Institute of Technology where I majored in Game Design and Development. "+
+
+        "\n\nI currently work as a Software Engineer at M&T Bank, where I joined as part of their Technology Development Program and graduated into the fulltime role I am in today.  I work on and manage a lot of tools based in Marketing Technology, so a lot of applications that deal with Communication, Collaboration, and Compliance."}
         ImageWidth={"80%"}
-      />
-      <TextBlock
-        Title={"What do I do outside of work?"}
-        Body={
-          "I spend my time walking and cuddling my corgi Wulfred, playing board games, creating stories in TTRPGs with my friends, creating literally anything related to those TTRPG stories (from prop weapons for Ren Faires to improve character sheets for playing), or training my HEMA (Historic European Martial Arts) skills. I have found that over the years that the inspiration that D&D and other TTRPGs give isn't just a reroll of a die, it's my ability to create something even when making something is the last thing I want to do. Which is such a beautiful thing about D&D and the groups we form along the way."
-        }
       />
       <Stack
         direction={"row"}
