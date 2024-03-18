@@ -22,13 +22,13 @@ export default function About({ setCurrentPage }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const resumePDF =  "https://karwacki-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/AnnaKarwacki-Resume2024.pdf";
+  const resumePDF =  "https://dillon-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/resume_AndrewDillon_2024.pdf";
   return (
     <Box>
       <TitleBar PageName={"About"} />
       <ImageTextComponent
         ImageLeft={true}
-        ImagePath={require("../Media/Images/creation-gif.gif")}
+        ImagePath={require("../Media/Images/self.jpg")}
         AltText={"gif of a pixel art version of myself writing"}
         Title={"Behind the Curtain"}
         Text={
@@ -41,20 +41,6 @@ export default function About({ setCurrentPage }) {
         Body={
           "I spend my time walking and cuddling my corgi Wulfred, playing board games, creating stories in TTRPGs with my friends, creating literally anything related to those TTRPG stories (from prop weapons for Ren Faires to improve character sheets for playing), or training my HEMA (Historic European Martial Arts) skills. I have found that over the years that the inspiration that D&D and other TTRPGs give isn't just a reroll of a die, it's my ability to create something even when making something is the last thing I want to do. Which is such a beautiful thing about D&D and the groups we form along the way."
         }
-      />
-      <ImageTextComponent
-        ImageLeft={false}
-        ImagePath={require("../Media/Images/meepthew-delivery-crop.jpg")}
-        AltText={"image of a homebrew d&d creature to talk about contact info"}
-        Title={"Want to talk More?"}
-        Text={
-          "If you thought to yourself: this is someone I should contact because I like what they are doing here are ways to get in touch with me."
-        }
-        ImageWidth={"50%"}
-        CallToActionName={"Email Me"}
-        ActionToCall={() => {
-          window.open("mailto:annamakesgames@gmail.com", "_blanks");
-        }}
       />
       <Stack
         direction={"row"}
@@ -77,26 +63,10 @@ export default function About({ setCurrentPage }) {
           FunctionName={"View my resume"}
         />
         <Infocards
-          Title={"GitHub"}
-          Infolist={resumeCard}
-          ActionFunction={() => {
-            window.open("https://github.com/AnnaKarwackiCodes", "_blanks")
-          }}
-          FunctionName={"Peak at my Github"}
-        />
-        <Infocards
-          Title={"LinkedIn"}
-          Infolist={resumeCard}
-          ActionFunction={() => {
-            window.open("https://linkedin.com/in/annakarwacki/", "_blanks")
-          }}
-          FunctionName={"View my Profile"}
-        />
-        <Infocards
           Title={"Email"}
           Infolist={resumeCard}
           ActionFunction={() => {
-            window.open("mailto:annamakesgames@gmail.com", "_blanks");
+            window.open("mailto:ajmakesgames@gmail.com", "_blanks");
           }}
           FunctionName={"Send an Email"}
         />

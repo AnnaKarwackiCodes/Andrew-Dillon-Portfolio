@@ -36,6 +36,10 @@
   height: auto!important;
 }
 
+.css-sghohy-MuiButtonBase-root-MuiButton-root, .css-11qr2p8-MuiButtonBase-root-MuiButton-root{
+  background-color: #175825!important
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

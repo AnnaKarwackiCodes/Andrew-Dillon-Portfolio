@@ -4,100 +4,79 @@ import Typography from "@mui/material/Typography";
 import TitleBar from "../Components/TitleBar";
 import Banner from "../Components/Banner";
 import ImageTextComponent from "../Components/ImageTextComponet";
-import TextBlock from "../Components/TextBlock";
-import Stack from "@mui/material/Stack";
-import Infocards from "../Components/Infocards";
+import PDFModal from "../Features/PDF/PDFModal";
 
-export default function Homepage({setCurrentPage}) {
-  const bannerImage = {
-    filePath: require("../Media/Images/linkedin-header.png"),
-    name: "Header Image",
-    altText: "Header image for the homepage",
-  };
+export default function Homepage({ setCurrentPage }) {
+  const [CurrentPDF, setCurrentPDF] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  const devCard = [
-    {
-        title: 'Languages',
-        details: 'C#, JavaScript, C++, HTML5, CSS, SCSS'
-    },
-    {
-        title: 'Libraries',
-        details: 'AR Foundation, React, React Native, Node.js'
-    },
-    {
-        title: 'Platforms',
-        details: 'Android, HP Mixed Reality Headset, iOS (React Native, Objective-C), Microsoft Hololens 2, Nintendo Switch, PC, Web (WordPress, HubSpot, Kajabi)'
-    },
-    {
-        title: 'Development Tools',
-        details: 'Unity, Microsoft Visual Studio, Visual Studio Code'
-    }, 
-];
-
-const designCard = [
-    {
-        title: 'Targets',
-        details: 'Digital Games, Web, TableTop RPG'
-    },
-    {
-        title: 'Tools',
-        details: 'Photoshop, inDesign, Marvel App, Figma, Affinity App Suite'
-    }
-];
-
-const artCard = [
-    {
-        title: 'Mediums',
-        details: '2D Traditional, 2D Digital, 3D Digital'
-    },
-    {
-        title: 'Digital Tools',
-        details: 'Procreate, Photoshop, Illustrator, Clip Studio, Maya (2017, 2018, 2019), Blender'
-    },
-    {
-        title: 'Physical Mediums',
-        details: 'Pen, Dip pen, Marker, Paint, Charcoal'
-    },
-];
+  const homeBrewPDF = "https://dillon-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/Way-of-the-Blackshot-ver1-1.pdf";
+  const homeBrewNotesPDF = "https://dillon-portfolio-bucket.s3.us-east-2.amazonaws.com/PDF/Design+Notes-+Way+of+the+Blackshot_1-1.pdf";
 
   return (
     <Box>
       <TitleBar PageName={"Welcome!"} />
-      <Banner Image={bannerImage} />
       <ImageTextComponent
         ImageLeft={false}
-        ImagePath={require("../Media/Images/picture-of-me.jpg")}
+        ImagePath={require("../Media/Images/self.jpg")}
         AltText={"photo of anna karwacki for intro section of the homepage"}
         Title={"Hi There!"}
         Text={
           "Thanks for stopping by, my name is Anna Karwacki. I am a software developer during the day, but during my free time I love creating things. Whether that is through development, art, design, or playing D&D with my friends."
         }
         ImageWidth={"60%"}
+        CallToActionName={"Contact Me"}
+        ActionToCall={() => {
+          setCurrentPage("About");
+        }}
       />
-      <TextBlock
-        Title={"Quick Overview of What I Can Do"}
-        Body={
-          "I work as a Software engineer on an AR communication application for the Apple iPad. Daily I work with React Native, Unity, AR Foundation and where Javascript cannot get the job done: Objective-C."
-        }
-        Width={"90%"}
-      />
-      <Stack direction={'row'} spacing={3} paddingLeft={'5%'} paddingRight={'5%'} paddingTop={'2.5%'} paddingBottom={'2.5%'}>
-        <Infocards Title={'Development'} Infolist={devCard} ActionFunction={()=>{setCurrentPage('Development')}} FunctionName={'Learn More'}/>
-        <Infocards Title={'Design'} Infolist={designCard} ActionFunction={()=>{setCurrentPage('Design')}} FunctionName={'Learn More'}/>
-        <Infocards Title={'Art'} Infolist={artCard} ActionFunction={()=>{setCurrentPage('Art')}} FunctionName={'Learn More'}/>
-      </Stack>
-
       <ImageTextComponent
         ImageLeft={true}
-        ImagePath={require("../Media/Images/creation-gif.gif")}
+        ImagePath={require("../Media/Images/blackshot-screenshot.png")}
         AltText={"photo of anna karwacki for intro section of the homepage"}
-        Title={"Now you got a little bit of an idea of what I can do:"}
+        Title={"Way of the Blackshot - 5e Monk Subclass"}
+        Text={"GM Binder, HTML/CSS" +
+        "\n\nCan be downloaded here or found on GM Binder. " +
+        "\n\nPlay as a Monk trained to use Firearms in tandem with their martial arts. Inspired by the likes of John Wick from the John Wick series and Leon Kennedy from the Resident Evil series"}
+        ImageWidth={"90%"}
+        CallToActionName={"View Subclass"}
+        ActionToCall={() => {
+          setCurrentPDF(homeBrewPDF);
+          handleOpen();
+        }}
+        SecondCallToActionName={"View Design Notes"}
+        SecondActionToCall={()=>{
+          setCurrentPDF(homeBrewNotesPDF);
+          handleOpen();
+        }}
+      />
+
+      <ImageTextComponent
+        ImageLeft={false}
+        ImagePath={require("../Media/Images/nullsector-cover.png")}
+        AltText={"Cover spread for the ttrpg Null Sector"}
+        Title={"Null Sector TTRPG"}
         Text={
-          "Take a look at more of what I've made or contact me if you want to talk more about what I have worked on. "
+          "Design and developed by a team of 5 people. Main roles were mechanics co-designer, item designer, and lore writer." +
+          "\n\nPublish on DrivethruRPG." +
+          "\n\nIn this TTRPG you play in the new USA, under the guidance and watchful eye of an all knowing AI: BINF. The players are all apart of different groups around the capital of this new United States who all have different skill focuses and relationships with the other groups.This system also features a unique reverse dice system where rolling low is your key to success." +
+          "\n\nThis game is focused toward experienced tabletop RPG players."
         }
-        ImageWidth={"60%"}
-        CallToActionName={'Contact Me'}
-        ActionToCall={()=>{setCurrentPage('About')}}
+        ImageWidth={"90%"}
+        CallToActionName={"Download for Free"}
+        ActionToCall={() => {
+          window.open(
+            "https://preview.drivethrurpg.com/en/product/229217/Null-Sector",
+            "_blanks"
+          );
+        }}
+      />
+      <PDFModal
+        CurrentPDF={CurrentPDF}
+        open={open}
+        handleClose={handleClose}
       />
     </Box>
   );

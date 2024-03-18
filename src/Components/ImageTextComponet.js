@@ -14,6 +14,8 @@ export default function ImageTextComponent({
   ImageWidth,
   CallToActionName,
   ActionToCall,
+  SecondCallToActionName,
+  SecondActionToCall,
 }) {
   const imgPath = ImagePath;
   const myDirection = ImageLeft ? "row" : "row-reverse";
@@ -50,6 +52,22 @@ export default function ImageTextComponent({
                 }}
               >
                 {CallToActionName}
+              </Button>
+            </Box>
+          )}
+          {SecondCallToActionName && (
+            <Box
+              alignContent={"center"}
+              justifyContent={"center"}
+              marginTop={"15px"}
+            >
+              <Button
+                variant="contained"
+                onClick={() => {
+                  SecondActionToCall();
+                }}
+              >
+                {SecondCallToActionName}
               </Button>
             </Box>
           )}

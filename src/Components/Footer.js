@@ -13,7 +13,7 @@ export default function Footer({}) {
       width={"98%"}
       alignContent={"center"}
       justifyContent={"center"}
-      backgroundColor={"#72baf4"}
+      backgroundColor={"#4aba63"}
     >
       <Stack direction={"row"}>
         <Typography sx={{ textAlign: "center", width: "100%" }}>
