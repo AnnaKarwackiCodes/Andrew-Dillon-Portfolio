@@ -28,10 +28,10 @@ export default function ImageTextComponent({
       paddingBottom={"2.5%"}
       container
     >
-      <Box width={"50%"} alignContent={"center"} justifyContent={"center"}>
+      <Box width={{xs: '100%',md: '50%'}} alignContent={"center"} justifyContent={"center"}>
         <img src={ImagePath} alt={AltText} width={ImageWidth} margin="auto" />
       </Box>
-      <Box alignItems={"center"} width={"50%"}>
+      <Box alignItems={"center"} width={{xs: '100%',md: '50%'}}>
         <Box>
           <Typography width={"90%"} fontSize={"2rem"}>
             {Title}
