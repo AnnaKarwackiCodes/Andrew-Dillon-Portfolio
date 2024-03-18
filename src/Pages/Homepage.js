@@ -73,6 +73,38 @@ export default function Homepage({ setCurrentPage }) {
           );
         }}
       />
+      <ImageTextComponent
+        ImageLeft={true}
+        ImagePath={require("../Media/Images/dontwastetimeonit.gif")}
+        AltText={"a gif of gameplay for the game Don't Spend Time On It"}
+        Title={"Don't Spend Time On It"}
+        Text={
+          "Designed with the theme of \"Everyday Hero\". Two person team, roles on project was co-designer and sole developer. Inspired by the games: Diner Dash and Typing of the Dead, \"Don't Spend Time On It\" is a two player game where one player is playing as a professor and the other is playing as the TA. \n\nThe professor's goal is to type the words that appear on the board behind them, the TA's job is to run around the classroom and gather as many words as they can for the professor to type. Putting more of the same word up on the board awards more points. \n\nMade during RIT's Hero Jam Fall 2017 and awarded Best Game."
+        }
+        ImageWidth={"90%"}
+        CallToActionName={'View Github'}
+        ActionToCall={()=>{window.open("https://github.com/AnnaKarwackiCodes/Hero-Jam-2017/tree/master", "_blanks")}}
+      />
+      <ImageTextComponent
+        ImageLeft={false}
+        ImagePath={require("../Media/Images/Sten.gif")}
+        AltText={"gif of heading bobbing animation of professor like character"}
+        Title={"Professor Character Head Bobbing Cycle"}
+        Text={
+          "Made in Photoshop"
+        }
+        ImageWidth={"60%"}
+      />
+      <ImageTextComponent
+        ImageLeft={true}
+        ImagePath={require("../Media/Images/AbilityIcons.jpg")}
+        AltText={"icons for rpg-styled project"}
+        Title={"Ability Icons for RPG-styled project"}
+        Text={
+          "Made in Photoshop"
+        }
+        ImageWidth={"90%"}
+      />
       <PDFModal
         CurrentPDF={CurrentPDF}
         open={open}
