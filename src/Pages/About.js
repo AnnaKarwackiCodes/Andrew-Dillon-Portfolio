@@ -34,7 +34,7 @@ export default function About({ setCurrentPage }) {
         Text={
           "Grew up in Maryland and went 6 hours north to go to college at the Rochester Institute of Technology where I graduated Fall of 2018 with a BS in Game Design and Development. \n\nI am currently working as a software engineer at Turnaround Factor. Over the past 6-ish years I have worked on a wild collection of projects at different companies: from porting a mobile game to the Nintendo Switch to building websites for companies in the Western New York Area to now making a video conferencing app with AR features."
         }
-        ImageWidth={"50%"}
+        ImageWidth={"80%"}
       />
       <TextBlock
         Title={"What do I do outside of work?"}
